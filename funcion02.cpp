@@ -5,11 +5,14 @@ using namespace std;
 int factorial(int a);
 
 int main(){
-    int sum=0, num;
+    int num;
+    double sum=0;
     
-    cout<<"Ingrese hasta que termino decea la suma: "<<endl; cin>>num;
+    cout<<"Ingrese hasta que termino decea la suma: "<<endl; 
+    cin>>num;
+
     for(int i=1 ; i<=num ; i++){
-        sum=sum + ((factorial(i))/(2*i));
+        sum+=factorial(i)/(2.0*i);
     }
     cout<<"La suma es: "<<sum;
     return 0;
