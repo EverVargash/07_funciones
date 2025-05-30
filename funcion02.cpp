@@ -8,13 +8,18 @@ int main(){
     int num;
     double sum=0;
     
-    cout<<"Ingrese hasta que termino decea la suma: "<<endl; 
+    cout<<"Ingrese hasta que termino desea la suma: "<<endl; 
     cin>>num;
-
-    for(int i=1 ; i<=num ; i++){
-        sum+=factorial(i)/(2.0*i);
+    
+    if(num>0){
+        for(int i=1 ; i<=num ; i++){
+            sum+=factorial(i)/(2.0*i);
+        }
+        cout<<"La suma es: "<<sum;
     }
-    cout<<"La suma es: "<<sum;
+    else {
+        cout<<"Ingrese un numero positivo para poder hacer la operacion";
+    }
     return 0;
 }
 
