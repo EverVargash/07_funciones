@@ -8,9 +8,13 @@ int main(){
     cout<<"*****************CALCULAR_EL_MCM_Y_MCD_DE_DOS_NUMEROS*****************"<<endl;
     cout<<"Ingrese el primer numero: "; cin>>x;
     cout<<"Ingrese el segundo numero: "; cin>>y;
-    MCDyMCM(x, y, &rMCD, &rMCM);
-    cout<<"MCD: "<<rMCD<<endl;
-    cout<<"MCM: "<<rMCM<<endl;
+
+    if(0<x && 0<y){
+        MCDyMCM(x, y, &rMCD, &rMCM);
+        cout<<"El MCD de "<<x<<" y "<<y<<" es: "<<rMCD<<endl;
+        cout<<"El MCM de "<<x<<" y "<<y<<" es: "<<rMCM<<endl;
+    }
+    else cout<<"Ingrese numeros positivos"<<endl;
     return 0;
 }
 
