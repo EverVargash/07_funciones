@@ -1,20 +1,29 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 void MCDyMCM(int a, int b, int *mcd, int *mcm);
 int main(){
     int x, y;
     int rMCD, rMCM;
-    cout<<"*****************CALCULAR_EL_MCM_Y_MCD_DE_DOS_NUMEROS*****************"<<endl;
-    cout<<"Ingrese el primer numero: "; cin>>x;
-    cout<<"Ingrese el segundo numero: "; cin>>y;
+    string op;
 
-    if(0<x && 0<y){
-        MCDyMCM(x, y, &rMCD, &rMCM);
-        cout<<"El MCD de "<<x<<" y "<<y<<" es: "<<rMCD<<endl;
-        cout<<"El MCM de "<<x<<" y "<<y<<" es: "<<rMCM<<endl;
-    }
-    else cout<<"Ingrese numeros positivos"<<endl;
+    cout<<"*****************CALCULAR_EL_MCM_Y_MCD_DE_DOS_NUMEROS*****************"<<endl;
+    do {
+        cout<<"Ingrese el primer numero: "; cin>>x;
+        cout<<"Ingrese el segundo numero: "; cin>>y;
+        if(0<x && 0<y){
+            MCDyMCM(x, y, &rMCD, &rMCM);
+            cout<<"El MCD de "<<x<<" y "<<y<<" es: "<<rMCD<<endl;
+            cout<<"El MCM de "<<x<<" y "<<y<<" es: "<<rMCM<<endl;
+            return 0;
+        }
+        else {
+            cout<<"Ingrese numeros entero positivos"<<endl;
+            cout<<"Presiona caulquier letra para salir del programa"<<endl;
+            cout<<"Presiona 'y' para volver a intentarlo:"; cin>>op;
+        }
+    } while (op=="y");
     return 0;
 }
 
