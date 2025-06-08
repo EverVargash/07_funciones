@@ -4,11 +4,15 @@ using namespace std;
 void MCDyMCM(int a, int b, int &mcd, int &mcm);
 
 int main(){
-    int x=18, y=24;
+    int x, y;
     int rMCD, rMCM;
+    cout<<"****************Calculo_de_MCD_y_MCM_de_dos_numeros****************"<<endl;
+    cout<<"                      (metodo de referencia)"<<endl;
+    cout<<"Ingrese un numero: "; cin>>x;
+    cout<<"Ingrese otro numero: "; cin>>y;
     MCDyMCM(x, y, rMCD, rMCM);
-    cout<<"MCD: "<<rMCD<<endl;
-    cout<<"MCM: "<<rMCM<<endl;
+    cout<<"El MCD de "<<x<<" y "<<y<<" es "<<rMCD<<endl;
+    cout<<"El MCM de "<<x<<" y "<<y<<" es "<<rMCM<<endl;
     return 0;
 }
 
