@@ -8,11 +8,14 @@ int main(){
     int rMCD, rMCM;
     cout<<"****************Calculo_de_MCD_y_MCM_de_dos_numeros****************"<<endl;
     cout<<"                      (metodo de referencia)"<<endl;
-    cout<<"Ingrese un numero: "; cin>>x;
-    cout<<"Ingrese otro numero: "; cin>>y;
-    MCDyMCM(x, y, rMCD, rMCM);
-    cout<<"El MCD de "<<x<<" y "<<y<<" es "<<rMCD<<endl;
-    cout<<"El MCM de "<<x<<" y "<<y<<" es "<<rMCM<<endl;
+    cout<<"Ingrese un numero(>0): "; cin>>x;
+    cout<<"Ingrese otro numero(>0): "; cin>>y;
+    if (0<x && 0<y){
+        MCDyMCM(x, y, rMCD, rMCM);
+        cout<<"El MCD de "<<x<<" y "<<y<<" es "<<rMCD<<endl;
+        cout<<"El MCM de "<<x<<" y "<<y<<" es "<<rMCM<<endl;
+    }
+    else cout<<"Ingrese numeros enteros positivos";
     return 0;
 }
 
