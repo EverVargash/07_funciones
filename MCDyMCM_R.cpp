@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 void MCDyMCM(int a, int b, int &mcd, int &mcm);
@@ -6,16 +7,23 @@ void MCDyMCM(int a, int b, int &mcd, int &mcm);
 int main(){
     int x, y;
     int rMCD, rMCM;
-    cout<<"****************Calculo_de_MCD_y_MCM_de_dos_numeros****************"<<endl;
-    cout<<"                      (metodo de referencia)"<<endl;
-    cout<<"Ingrese un numero(>0): "; cin>>x;
-    cout<<"Ingrese otro numero(>0): "; cin>>y;
-    if (0<x && 0<y){
-        MCDyMCM(x, y, rMCD, rMCM);
-        cout<<"El MCD de "<<x<<" y "<<y<<" es "<<rMCD<<endl;
-        cout<<"El MCM de "<<x<<" y "<<y<<" es "<<rMCM<<endl;
-    }
-    else cout<<"Ingrese numeros enteros positivos";
+    string op;
+    do{
+        cout<<"****************Calculo_de_MCD_y_MCM_de_dos_numeros****************"<<endl;
+        cout<<"                      (metodo de referencia)"<<endl;
+        cout<<"Ingrese un numero(>0): "; cin>>x;
+        cout<<"Ingrese otro numero(>0): "; cin>>y;
+        if (0<x && 0<y){
+            MCDyMCM(x, y, rMCD, rMCM);
+            cout<<"El MCD de "<<x<<" y "<<y<<" es "<<rMCD<<endl;
+            cout<<"El MCM de "<<x<<" y "<<y<<" es "<<rMCM<<endl;
+            return 0;
+        }
+        else {
+            cout<<"Ingrese numeros enteros positivos"<<endl;
+            cout<<"Ingrese y para volver a intentarlo: "; cin>>op;
+        }
+    } while (op=="y");
     return 0;
 }
 
